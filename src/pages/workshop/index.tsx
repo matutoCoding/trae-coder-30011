@@ -40,15 +40,23 @@ const WorkshopPage: React.FC = () => {
     { icon: '✨', text: '成品', path: '/pages/product/index' },
     { icon: '📋', text: '订单', path: '/pages/order/index' },
     { icon: '💰', text: '台账', path: '/pages/sales/index' },
-    { icon: '🏛️', text: '工艺', path: '' }
+    { icon: '🏛️', text: '工艺', path: '/pages/craft/index' }
   ];
 
-  const handleNavClick = (path: string) => {
-    if (!path) {
-      Taro.showToast({ title: '工艺展示开发中', icon: 'none' });
-      return;
+  const navigateToPage = (path: string) => {
+    const isTabPage = path === '/pages/making/index'
+      || path === '/pages/product/index'
+      || path === '/pages/order/index'
+      || path === '/pages/workshop/index';
+    if (isTabPage) {
+      Taro.switchTab({ url: path });
+    } else {
+      Taro.navigateTo({ url: path });
     }
-    Taro.navigateTo({ url: path });
+  };
+
+  const handleNavClick = (path: string) => {
+    navigateToPage(path);
   };
 
   const handleProcessClick = (key: string) => {
@@ -62,7 +70,7 @@ const WorkshopPage: React.FC = () => {
     };
     const path = pathMap[key];
     if (path) {
-      Taro.navigateTo({ url: path });
+      navigateToPage(path);
     }
   };
 

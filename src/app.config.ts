@@ -7,7 +7,8 @@ export default defineAppConfig({
     'pages/recipe/index',
     'pages/smoke/index',
     'pages/drying/index',
-    'pages/sales/index'
+    'pages/sales/index',
+    'pages/craft/index'
   ],
   window: {
     backgroundTextStyle: 'dark',
