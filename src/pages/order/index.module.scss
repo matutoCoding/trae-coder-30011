@@ -1,0 +1,122 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, #4A6741 0%, #5C8050 100%);
+}
+
+.headerTitle {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  margin-bottom: $spacing-xs;
+}
+
+.headerDesc {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.statRow {
+  display: flex;
+  gap: $spacing-md;
+  padding: $spacing-md $spacing-lg;
+  background: $color-bg-card;
+}
+
+.orderCard {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin: $spacing-md $spacing-lg;
+}
+
+.orderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.orderCustomer {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+  max-width: 400rpx;
+}
+
+.orderInfo {
+  margin-bottom: $spacing-sm;
+}
+
+.orderInfoRow {
+  display: flex;
+  margin-bottom: $spacing-xs;
+}
+
+.orderLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  width: 140rpx;
+  flex-shrink: 0;
+}
+
+.orderValue {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  flex: 1;
+  @include text-ellipsis-multi(2);
+}
+
+.orderItems {
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  padding: $spacing-sm $spacing-md;
+  margin-top: $spacing-sm;
+}
+
+.orderItemsText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.orderBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $spacing-md;
+  padding-top: $spacing-sm;
+  border-top: 1rpx solid $color-divider;
+}
+
+.orderAmount {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-gold-dark;
+}
+
+.orderDate {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.packageInfo {
+  margin-top: $spacing-sm;
+}
+
+.packageLabel {
+  font-size: $font-size-xs;
+  color: $color-gold;
+  background: $color-tag-gold-bg;
+  padding: 4rpx 16rpx;
+  border-radius: $radius-xs;
+  display: inline-block;
+}

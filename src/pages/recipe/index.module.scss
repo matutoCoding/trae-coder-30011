@@ -1,0 +1,121 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: $spacing-xl;
+}
+
+.filterRow {
+  display: flex;
+  padding: $spacing-md $spacing-lg;
+  gap: $spacing-sm;
+  background: $color-bg-card;
+  margin-bottom: $spacing-md;
+}
+
+.filterTag {
+  @include button-reset;
+  padding: 8rpx 32rpx;
+  height: 56rpx;
+  background: $color-bg-page;
+  border-radius: $radius-round;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  border: 2rpx solid $color-border;
+  white-space: nowrap;
+
+  &.filterActive {
+    background: $color-primary;
+    color: $color-text-white;
+    border-color: $color-primary;
+  }
+}
+
+.recipeCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin: 0 $spacing-lg $spacing-md;
+}
+
+.recipeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.recipeName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.recipeTypeTag {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  padding: 4rpx 16rpx;
+  border-radius: $radius-xs;
+  white-space: nowrap;
+}
+
+.typeOil {
+  color: #5C3A28;
+  background-color: #F0E6DA;
+}
+
+.typePine {
+  color: #4A6741;
+  background-color: #EDF5EB;
+}
+
+.recipeInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx $spacing-lg;
+  margin-bottom: $spacing-sm;
+}
+
+.infoItem {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.ingredientsWrap {
+  margin-top: $spacing-sm;
+}
+
+.ingredientsLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-xs;
+}
+
+.ingredientsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.ingredientTag {
+  font-size: $font-size-xs;
+  color: $color-gold-dark;
+  background: $color-tag-gold-bg;
+  padding: 4rpx 16rpx;
+  border-radius: $radius-xs;
+  white-space: nowrap;
+}
+
+.recipeNote {
+  margin-top: $spacing-sm;
+  padding-top: $spacing-sm;
+  border-top: 1rpx solid $color-divider;
+}
+
+.noteText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  font-style: italic;
+}

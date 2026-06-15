@@ -1,0 +1,162 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #EDE3D5 0%, $color-bg-page 30%);
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg $spacing-lg $spacing-md;
+}
+
+.shopName {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  margin-bottom: $spacing-xs;
+}
+
+.shopSlogan {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.statRow {
+  display: flex;
+  gap: $spacing-md;
+  padding: 0 $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.section {
+  padding: 0 $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.sectionMore {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.processGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.processItem {
+  width: calc(50% - #{$spacing-md} / 2);
+}
+
+.craftCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin: 0 $spacing-lg $spacing-md;
+}
+
+.craftTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  margin-bottom: $spacing-sm;
+}
+
+.craftStep {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+}
+
+.stepDot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: $radius-round;
+  background: $color-gold;
+  margin-top: 8rpx;
+  margin-right: $spacing-sm;
+  flex-shrink: 0;
+}
+
+.stepLine {
+  position: relative;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 4rpx;
+}
+
+.stepDesc {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  line-height: $line-height-loose;
+}
+
+.quickNav {
+  padding: 0 $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.navTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.navGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.navItem {
+  width: calc(25% - #{$spacing-md} * 3 / 4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md 0;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.85;
+    transform: scale(0.95);
+  }
+}
+
+.navIcon {
+  font-size: 48rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.navText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+}

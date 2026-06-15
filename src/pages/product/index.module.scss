@@ -1,0 +1,152 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, $color-gold-dark 0%, $color-gold 100%);
+}
+
+.headerTitle {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  margin-bottom: $spacing-xs;
+}
+
+.headerDesc {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.filterRow {
+  display: flex;
+  padding: $spacing-md $spacing-lg;
+  gap: $spacing-sm;
+  background: $color-bg-card;
+}
+
+.filterTag {
+  @include button-reset;
+  padding: 8rpx 24rpx;
+  height: 56rpx;
+  background: $color-bg-page;
+  border-radius: $radius-round;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  border: 2rpx solid $color-border;
+  white-space: nowrap;
+
+  &.filterActive {
+    background: $color-primary;
+    color: $color-text-white;
+    border-color: $color-primary;
+  }
+}
+
+.section {
+  padding: $spacing-md $spacing-lg 0;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.productCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+  overflow: hidden;
+  display: flex;
+}
+
+.productImage {
+  width: 240rpx;
+  height: 240rpx;
+  flex-shrink: 0;
+}
+
+.productInfo {
+  flex: 1;
+  padding: $spacing-md $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.productName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+}
+
+.productType {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+}
+
+.productDetail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx $spacing-lg;
+  margin-top: $spacing-sm;
+}
+
+.detailItem {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.productBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $spacing-sm;
+}
+
+.productPrice {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-gold-dark;
+}
+
+.productStock {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.gildingSection {
+  padding: $spacing-md $spacing-lg;
+}
+
+.gildingCard {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+}
+
+.gildingTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-gold-dark;
+  margin-bottom: $spacing-sm;
+}
+
+.gildingDesc {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  line-height: $line-height-loose;
+}

@@ -1,0 +1,143 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: $spacing-xl;
+}
+
+.header {
+  padding: $spacing-lg;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+}
+
+.headerTitle {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  margin-bottom: $spacing-xs;
+}
+
+.headerDesc {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs {
+  display: flex;
+  padding: 0 $spacing-lg;
+  margin-top: -$spacing-lg;
+  gap: $spacing-sm;
+}
+
+.tab {
+  @include button-reset;
+  flex: 1;
+  height: $button-height-md;
+  background: $color-bg-card;
+  border-radius: $radius-md $radius-md 0 0;
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  border: none;
+  transition: all $transition-base;
+
+  &.tabActive {
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+    background: $color-bg-card;
+    box-shadow: $shadow-card;
+  }
+}
+
+.tabContent {
+  background: $color-bg-card;
+  padding: $spacing-lg;
+  min-height: 400rpx;
+}
+
+.stepSection {
+  margin-bottom: $spacing-lg;
+}
+
+.stepTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-sm;
+  border-left: 6rpx solid $color-gold;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.formLabel {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  width: 160rpx;
+  flex-shrink: 0;
+}
+
+.formValue {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+  flex: 1;
+}
+
+.recordCard {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin: 0 $spacing-lg $spacing-md;
+}
+
+.recordHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.recordName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.recordInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm $spacing-lg;
+  margin-top: $spacing-sm;
+}
+
+.recordInfoItem {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.progressBar {
+  height: 8rpx;
+  background: $color-divider;
+  border-radius: $radius-round;
+  margin-top: $spacing-md;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: $radius-round;
+  background: linear-gradient(90deg, $color-gold-dark, $color-gold-light);
+}
+
+.progressLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: $spacing-xs;
+  text-align: right;
+}
